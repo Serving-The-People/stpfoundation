@@ -91,11 +91,6 @@ export default function Community() {
           </div>
         </Container>
       </div>
-      <div className="mb-8 mt-auto max-w-[800px]">
-        <p className="font-serif text-lg/8 tracking-[.035rem] text-slate-800">
-          {`We understand that dialogue is what drives societal transformation and catalyzes profound progress.`}
-        </p>
-      </div>
     </>
   );
 }
