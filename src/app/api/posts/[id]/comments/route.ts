@@ -54,20 +54,16 @@ export async function GET(
 }
 
 export async function POST(
-  req: NextApiRequest,
-  res: NextApiResponse,
+  req: NextRequest,
   { params }: { params: { id: string } }
 ) {
   try {
     const { userId } = getAuth(req);
-    const body = req.body;
+    const body = await req.json();
     if (!userId) {
-      return res.status(401).json({ message: "Not logged in" });
-    }
-
-    const result = await moderate(body.content);
-    if (result.flagged) {
-      return res.status(422).json({ message: "Inappropriate comment" });
+      return new Response("Not logged in", {
+        status: 401,
+      });
     }
 
     const commentRow = await prisma.comment.create({
@@ -81,12 +77,13 @@ export async function POST(
       where: { id: +params.id },
       data: { lastCommentedAt: commentRow.createdAt },
     });
-
-    return res.status(201).json({ message: "Created" });
+    return new Response("Created", {
+      status: 201,
+    });
   } catch (error) {
     console.error("Error:", error);
-    return res
-      .status(500)
-      .json({ error: "An error occurred while fetching data." });
+    return new Response("An error occurred while fetching data.", {
+      status: 500,
+    });
   }
 }
