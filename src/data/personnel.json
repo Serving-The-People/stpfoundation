@@ -4,16 +4,16 @@
       "name": "Board of Directors",
       "children": [
         {
-          "name": "Adam Cohen"
+          "name": "Rob Christofaro"
         },
         {
-          "name": "Arun Dua"
+          "name": "Seth Cameron"
         },
         {
           "name": "Damany Weir"
         },
         {
-          "name": "David Jacobs"
+          "name": "Leandra Cohen"
         },
         {
           "name": "Michaela Da Pury"
@@ -22,7 +22,7 @@
           "name": "Mo Koyfman"
         },
         {
-          "name": "Seth Cameron"
+          "name": "Tremaine Emory"
         }
       ]
     },
@@ -33,16 +33,13 @@
           "name": "Anastasiya Siro"
         },
         {
-          "name": "Rob Cristofaro"
+          "name": "Adam Cohen"
         },
         {
-          "name": "Seth Cameron"
+          "name": "Arun Dua"
         },
         {
-          "name": "Tremaine Emory"
-        },
-        {
-          "name": "Leandra Cohen"
+          "name": "David Jacobs"
         }
       ]
     },
@@ -57,6 +54,9 @@
         },
         {
           "name": "Lucien Smith"
+        },
+        {
+          "name": "Michael Moseberg"
         }
       ]
     }
