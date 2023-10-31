@@ -62,7 +62,6 @@ const Philosophy: React.FC = () => {
             height={1000}
             quality={100}
             alt="STP Structure Tree"
-            className="mb-4"
           />
         </div>
       </div>
