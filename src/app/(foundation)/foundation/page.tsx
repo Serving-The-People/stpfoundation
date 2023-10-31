@@ -1,6 +1,7 @@
 import { Container } from "@/Components/Container";
 import personnel from "@/data/personnel.json";
 import { Metadata } from "next";
+import Link from "next/link";
 import React from "react";
 
 export const metadata: Metadata = {
@@ -20,6 +21,48 @@ export default function Community() {
               person. Established in 2017, STP has launched a number of initiatives
               and developed a platform for connecting creators with audiences, as well
               as finding opportunities for collaboration and support.`}
+            </p>
+          </div>
+
+          <div>
+            <h1>The STP Creative Foundation</h1>
+            <p>
+              <>
+                {`Established as an integral arm of STP, The STP Creative Foundation
+              has a singular purpose: to host enriching discussion groups in
+              various cities, thereby fostering an environment of shared
+              knowledge and growth. Beyond these discussions, the Foundation
+              extends its outreach through programming, including workshops,
+              lectures, and more, thereby ensuring a holistic approach to
+              community development.`}
+              </>
+            </p>
+            <p>
+              <>
+                {`Our commitment to prioritizing community over profits is made
+              tangible through this foundation. Funds generated from our
+              for-profit ventures are channeled into the foundation, ensuring
+              that every venture indirectly contributes to our overarching goal
+              of cultural enrichment.`}
+              </>
+            </p>
+            <p>
+              <>
+                {`STP's for-profit projects, ranging from clothing lines to
+              cutting-edge software like Studio, aren't just revenue generators.
+              They are the lifeblood that fuels our mission, enabling us to
+              invest more into the community. Through the innovative `}
+                <Link
+                  href="https://seedsdao.vercel.app/"
+                  target="_blank"
+                  className="underline"
+                >
+                  SEEDS
+                </Link>
+                {` project, we embrace the future of decentralized decision-making,
+              allowing community participation in shaping our creative
+              endeavors.`}
+              </>
             </p>
           </div>
           <div className="grid grid-cols-2 justify-between gap-y-10 text-slate-800 sm:grid-cols-3">

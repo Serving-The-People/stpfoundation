@@ -2,6 +2,7 @@ import { AllClientContexts } from "@/Components/AllClientContexts";
 import { UserProvider } from "@/Components/userContext";
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -22,7 +23,10 @@ export default function RootLayout({
             <ClerkProvider
               publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
             >
-              <UserProvider>{children}</UserProvider>
+              <UserProvider>
+                {children}
+                <Analytics />
+              </UserProvider>
             </ClerkProvider>
           </AllClientContexts>
         </div>
