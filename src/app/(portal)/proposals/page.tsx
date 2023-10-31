@@ -27,11 +27,11 @@ const Proposals: React.FC = () => {
         </p>
         <div>
           <Link
-            href="https://seedsdao.vercel.app/"
+            href="https://www.stp.world/proposals"
             target="_blank"
             className="group flex items-center underline"
           >
-            Visit the Proposal Gateway
+            Proposal Gateway Coming Soon...
             <LinkIcon
               className="self-start opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               fill="white"
