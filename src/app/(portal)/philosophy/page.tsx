@@ -1,6 +1,6 @@
 import { Container } from "@/Components/Container";
 import personnel from "@/data/personnel.json";
-import structureTree from "@/images/structureTree.svg";
+import structureTree from "@/images/StructureTree.png";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
