@@ -20,7 +20,7 @@ export default function IndexPage() {
               where members can share their experiences and learn from one another.`}
           </p>
           <iframe
-            src="https://lu.ma/embed/calendar/cal-0Gt4yRZeQakRw8M/events?lt=light"
+            src="https://lu.ma/embed/calendar/cal-4veiS7H2EnbSJMW/events?lt=light"
             className="h-[55vh] w-full max-w-[800px] rounded-md border border-slate-200"
             allowFullScreen={true}
             aria-hidden="false"
