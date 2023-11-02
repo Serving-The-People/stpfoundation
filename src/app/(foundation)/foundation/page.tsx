@@ -53,13 +53,13 @@ export default function Community() {
               They are the lifeblood that fuels our mission, enabling us to
               invest more into the community. Through the innovative `}
                 <Link
-                  href="https://seedsdao.vercel.app/"
+                  href="https://www.stp.world/proposals"
                   target="_blank"
                   className="underline"
                 >
-                  SEEDS
+                  Proposals
                 </Link>
-                {` project, we embrace the future of decentralized decision-making,
+                {` program, we embrace the future of decentralized decision-making,
               allowing community participation in shaping our creative
               endeavors.`}
               </>
