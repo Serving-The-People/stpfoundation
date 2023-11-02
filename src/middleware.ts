@@ -35,6 +35,8 @@ export default authMiddleware({
     "/api/posts",
     "/api/posts/:id/comments",
     "/api/posts/:id/comments/:cid",
+    "/sitemap.xml",
+    "/robots.txt",
   ],
   signInUrl: process.env.NEXT_PUBLIC_API_URL + "/login",
 });
