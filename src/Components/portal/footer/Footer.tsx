@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
       className: "",
     },
     {
-      href: "mailto:info@stp.world",
+      href: "mailto:contact@stp.world",
       content: "contact@stp.world",
       className: "hidden md:block",
     },

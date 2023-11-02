@@ -1,4 +1,4 @@
-import { Container } from "@/Components/Container";
+import { Container } from "@/components/Container";
 import LinkIcon from "@/images/icons/linkIcon";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const Membership = () => {
   return (
-    <Container className="my-6 max-w-[800px] text-slate-800">
+    <Container className="mb-8 mt-6 max-w-[800px] text-slate-800">
       <div>
         <h1>We need your support!</h1>
         <p>
@@ -30,8 +30,6 @@ const Membership = () => {
           a community of fellow artists and supporters, as well as workshops,
           mentorship, events, and strengthen the arts community as a whole.`}
         </p>
-      </div>
-      <div>
         <DonateButton />
       </div>
     </Container>

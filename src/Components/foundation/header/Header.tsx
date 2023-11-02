@@ -1,6 +1,6 @@
 "use client";
 
-import Logo from "@/Components/portal/logo/Logo";
+import Logo from "@/components/portal/logo/Logo";
 import ChevronDown from "@/images/icons/chevronDown";
 import ChevronUp from "@/images/icons/chevronUp";
 import LinkIcon from "@/images/icons/linkIcon";
@@ -140,7 +140,10 @@ function singleLink(item: MenuItem) {
 function Header({ showLogo }: HeaderProps) {
   const user = useUser();
   const pathname = usePathname();
-  const isActive = pathname === "/login";
+
+  if (pathname === "/login") {
+    showLogo = true;
+  }
 
   return (
     <div className="mx-2 mb-2 flex w-full flex-row-reverse justify-between md:mb-0 md:w-min md:flex-col">

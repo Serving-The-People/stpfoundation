@@ -1,4 +1,4 @@
-import { Container } from "@/Components/Container";
+import { Container } from "@/components/Container";
 import LinkIcon from "@/images/icons/linkIcon";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const Proposals: React.FC = () => {
   return (
-    <Container>
+    <Container className="mb-8">
       <div>
         <h1>Proposal Gateway</h1>
         <p>

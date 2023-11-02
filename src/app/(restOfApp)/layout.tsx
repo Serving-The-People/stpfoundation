@@ -1,5 +1,5 @@
-import Footer from "@/Components/foundation/footer/Footer";
-import NavBar from "@/Components/foundation/header/Header";
+import Footer from "@/components/foundation/footer/Footer";
+import Header from "@/components/foundation/header/Header";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <div className="mx-4 flex min-h-[100svh] flex-col items-center">
-      <NavBar />
+      <Header />
       {children}
       <Footer />
     </div>

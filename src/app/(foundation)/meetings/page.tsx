@@ -1,4 +1,4 @@
-import { Container } from "@/Components/Container";
+import { Container } from "@/components/Container";
 import { Metadata } from "next";
 import React from "react";
 
@@ -28,7 +28,7 @@ export default function IndexPage() {
           />
         </div>
       </Container>
-      <div className="my-8 max-w-[800px]">
+      <div className="mb-8 max-w-[800px]">
         <p className="font-serif text-lg/8 tracking-[.035rem] text-slate-800">
           {`We understand that dialogue is what drives societal transformation and catalyzes profound progress.`}
         </p>
