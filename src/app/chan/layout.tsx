@@ -7,6 +7,7 @@ interface ChanLayoutProps {
 
 export const metadata: Metadata = {
   title: "Chan",
+  description: "Serving The People Chan",
   themeColor: "#F4F4FE",
   colorScheme: "light",
 };
