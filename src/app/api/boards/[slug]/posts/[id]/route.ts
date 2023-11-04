@@ -69,7 +69,6 @@ export async function PUT(
 
   const { isAuthor, ...body } = await req.json();
 
-
   const dataNew = await prisma.post.update({
     where: { id: data.id },
     data: { ...body },

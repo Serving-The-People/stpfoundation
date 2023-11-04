@@ -38,6 +38,7 @@
     "@types/lodash": "^4.14.191",
     "@types/next": "^9.0.0",
     "@uploadcare/blocks": "^0.22.13",
+    "@uploadcare/nextjs-loader": "^1.0.0",
     "@uploadcare/react-widget": "^2.4.5",
     "@uploadcare/rest-client": "^6.6.1",
     "@uploadcare/upload-client": "^6.6.1",

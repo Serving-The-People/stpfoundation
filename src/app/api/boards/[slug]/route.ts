@@ -21,7 +21,6 @@ export async function GET(req: any, { params }: { params: { slug: string } }) {
       return Response.json({ message: "Board not found" }, { status: 404 });
     }
   } catch (error) {
-    console.log(error);
     return Response.json({ message: "Internal server error" }, { status: 500 });
   } finally {
     await prisma.$disconnect();

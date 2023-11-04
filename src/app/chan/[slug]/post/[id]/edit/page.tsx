@@ -56,7 +56,7 @@ export default function PostEditPage() {
   if (!post) {
     return <p>Error: Post data not loaded.</p>;
   }
-  console.log("post", slug);
+
   return (
     <div className="bg-[#F4F4FE]">
       {post.isAuthor ? (

@@ -18,7 +18,6 @@ const Membership = () => {
   const { get } = useSearchParams();
   const code = get("code");
   const { enqueueSnackbar } = useSnackbar();
-  console.log(code);
   useEffect(() => {
     if (code && isLoaded && user) {
       setLoading(true);

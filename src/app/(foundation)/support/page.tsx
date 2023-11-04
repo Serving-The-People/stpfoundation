@@ -1,7 +1,5 @@
 import { Container } from "@/components/Container";
-import LinkIcon from "@/images/icons/linkIcon";
 import type { Metadata } from "next";
-import Link from "next/link";
 import React from "react";
 import DonateButton from "./DonateButton";
 
