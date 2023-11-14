@@ -127,7 +127,6 @@ export async function POST(
           },
         })
       : null;
-  let where = board ? { boardId: board.id } : {};
   if (slug === "all") {
     const res: NextResponse = new NextResponse(null, {
       status: 302,
@@ -140,15 +139,6 @@ export async function POST(
   const { userId } = getAuth(req);
   if (!userId)
     return Response.json({ message: "Not logged in" }, { status: 401 });
-  let result = await moderate(content ?? "");
-  if (result.flagged) {
-    return Response.json({ message: "Inappropriate comment" }, { status: 422 });
-  }
-
-  result = await moderate(title!);
-  if (result.flagged) {
-    return Response.json({ message: "Inappropriate title" }, { status: 422 });
-  }
 
   await prisma.post.create({
     data: {

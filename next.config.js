@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    compress: true,
-    loader: "custom"
+    compress: true
 }
 
 module.exports = nextConfig

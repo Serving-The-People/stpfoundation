@@ -1,7 +1,6 @@
 import { getAuth } from "@clerk/nextjs/server";
 import { NextApiRequest, NextApiResponse } from "next";
 import { NextRequest } from "next/server";
-import { moderate } from "../../../../../utils/openai";
 import { prisma } from "../../../../../utils/prisma";
 import { getUserData } from "../../../../../utils/userData";
 
