@@ -1,5 +1,7 @@
 import { Container } from "@/components/Container";
+import nyscaLogo from "@/images/nyscaLogo.png";
 import type { Metadata } from "next";
+import Image from "next/image";
 import React from "react";
 import DonateButton from "./DonateButton";
 
@@ -29,6 +31,18 @@ const Membership = () => {
           mentorship, events, and strengthen the arts community as a whole.`}
         </p>
         <DonateButton />
+      </div>
+      <div>
+        <h1></h1>
+        <p>
+          Serving the People's programs are supported, in part, by public funds
+          from the New York State Council on the Arts.
+        </p>
+        <Image
+          src={nyscaLogo}
+          alt="New York State of Opportunity | Council on the Arts"
+          className="h-auto w-[290px]"
+        />
       </div>
     </Container>
   );
