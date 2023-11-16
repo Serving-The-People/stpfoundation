@@ -35,8 +35,8 @@ const Membership = () => {
       <div>
         <h1></h1>
         <p>
-          Serving the People's programs are supported, in part, by public funds
-          from the New York State Council on the Arts.
+          {`Serving the People's programs are supported, in part, by public funds
+          from the New York State Council on the Arts.`}
         </p>
         <Image
           src={nyscaLogo}
