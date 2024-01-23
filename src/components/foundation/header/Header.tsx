@@ -165,12 +165,12 @@ function Header({ showLogo }: HeaderProps) {
       <Disclosure
         as="nav"
         style={{
-          position: "sticky",
-          top: "25px",
           width: "100%",
           padding: "4px",
         }}
-        className="z-50"
+        className={`${
+          pathname.startsWith("/chan") ? "absolute right-4" : "sticky"
+        } top-[25px] z-50`}
       >
         {({ open }) => (
           <>
@@ -189,7 +189,7 @@ function Header({ showLogo }: HeaderProps) {
                 </Disclosure.Button>
               </div>
             </div>
-            <Disclosure.Panel className="absolute -right-2 mt-8 z-50 rounded-md bg-[#eff0f0] px-2 py-2 font-sans text-sm/8 uppercase tracking-wide foundationNavX:hidden">
+            <Disclosure.Panel className="absolute -right-2 z-50 mt-8 rounded-md bg-[#eff0f0] px-2 py-2 font-sans text-sm/8 uppercase tracking-wide foundationNavX:hidden">
               <div className="flex flex-col space-y-4 text-left">
                 {nav.items.map((item, index) => {
                   return item.children && item.children.length
