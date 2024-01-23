@@ -135,7 +135,7 @@ function Header() {
           </>
         )}
       </Disclosure>
-      <div className="mb-20 flex w-full justify-center md:mb-0 md:w-min md:flex-col">
+      <div className="flex w-full justify-center md:mb-0 md:w-min md:flex-col">
         <div className="mb-4 hidden font-sans text-sm/8 uppercase tracking-wide md:flex">
           <div className="flex h-full flex-row space-x-5">
             {nav.items.map((item, index) => {
@@ -150,6 +150,7 @@ function Header() {
             <Logo width={70} className="shadow-xl shadow-white/10" />
           </Link>
         </div>
+        <div className="mb-[105px] md:mb-[12.5px]"/>
       </div>
     </>
   );
