@@ -16,7 +16,7 @@ const Logo = ({ width, className }: LogoProps) => {
       quality={100}
       priority={true}
       draggable={false}
-      className={className}
+      className={`${className} rounded-sm`}
     />
   );
 };

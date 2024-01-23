@@ -1,7 +1,7 @@
 "use client";
 
-import Logo from "@/components/portal/logo/Logo";
-import nav from "@/components/portal/nav/Nav.json";
+import Logo from "@/tempname/portal/logo/Logo";
+import nav from "@/tempname/portal/nav/Nav.json";
 import ChevronDown from "@/images/icons/chevronDown";
 import ChevronUp from "@/images/icons/chevronUp";
 import LinkIcon from "@/images/icons/linkIcon";
@@ -28,7 +28,7 @@ function multiLink(item: MenuItem, index: number) {
           <Menu.Button
             className={`${
               isActive ? "bg-neutral-900" : "hover:bg-neutral-900"
-            } z-50 flex flex-row-reverse rounded-md px-4 uppercase tracking-wide text-white md:flex-row`}
+            }  flex flex-row-reverse rounded-md px-4 uppercase tracking-wide text-white md:flex-row`}
           >
             {item.name}
             <span
@@ -49,7 +49,7 @@ function multiLink(item: MenuItem, index: number) {
           {open && (
             <Menu.Items
               static
-              className={`absolute top-0 z-40 flex w-[100%] flex-col items-end md:right-0 ${
+              className={`absolute top-0 flex w-[100%] flex-col items-end md:right-0 ${
                 index === 2 ? "right-[10.2rem]" : "right-[9.4rem]"
               } flex-end mt-[-.5rem] flex w-max flex-col rounded-md bg-neutral-950 p-2 text-white shadow-lg ring-1 ring-black ring-opacity-5 md:left-0 md:ml-[-.5rem] md:mt-8 md:items-start md:bg-[#000000e3]`}
             >
@@ -94,13 +94,27 @@ function singleLink(item: MenuItem) {
 
 function Header() {
   return (
-    <div className="mb-8 flex w-full flex-row-reverse justify-between md:mb-0 md:w-min md:flex-col">
-      <Disclosure as="nav" className=" w-full px-4">
+    <>
+      <Disclosure
+        as="nav"
+        style={{
+          position: "sticky",
+          top: "25px",
+          width: "100%",
+          padding: "4px",
+        }}
+        className="z-50"
+      >
         {({ open }) => (
           <>
-            <div className="relative flex h-16 items-center justify-between md:hidden">
-              <div className="absolute inset-y-0 right-0 flex items-center">
-                <Disclosure.Button className="relative z-10 inline-flex rounded-md p-2 text-white hover:bg-neutral-900 focus:outline-none">
+            <div className="relative flex items-center justify-between md:hidden">
+              <div className="absolute inset-y-0 right-1 flex items-center">
+                <Disclosure.Button
+                  color="black"
+                  className={`z-50 inline-flex h-auto rounded-md   p-2 text-white  hover:bg-neutral-900 focus:outline-none ${
+                    open ? "bg-neutral-900" : "bg-[#000000e3]"
+                  }`}
+                >
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
                   ) : (
@@ -109,8 +123,8 @@ function Header() {
                 </Disclosure.Button>
               </div>
             </div>
-            <Disclosure.Panel className="absolute right-4 z-50 rounded-md bg-neutral-950 p-2 font-sans text-sm/8 uppercase tracking-wide md:hidden">
-              <div className="flex flex-col space-y-4">
+            <Disclosure.Panel className="absolute right-2 z-50 mt-8 rounded-md bg-neutral-950 p-2 font-sans text-sm/8 uppercase tracking-wide md:hidden">
+              <div className="z-50 flex flex-col space-y-4">
                 {nav.items.map((item, index) => {
                   return item.children && item.children.length
                     ? multiLink(item, index)
@@ -118,24 +132,26 @@ function Header() {
                 })}
               </div>
             </Disclosure.Panel>
-            <div className="mt-2 hidden content-center justify-between font-sans text-sm/8 uppercase tracking-wide md:flex">
-              <div className="flex flex-row space-x-5">
-                {nav.items.map((item, index) => {
-                  return item.children && item.children.length
-                    ? multiLink(item, index)
-                    : singleLink(item);
-                })}
-              </div>
-            </div>
           </>
         )}
       </Disclosure>
-      <div className="absolute top-0 z-0 mb-5 mt-4 flex w-full place-content-center self-center md:static">
-        <Link href="/" className="z-30">
-          <Logo width={70} className="shadow-xl shadow-white/10" />
-        </Link>
+      <div className="mb-20 flex w-full justify-center md:mb-0 md:w-min md:flex-col">
+        <div className="mb-4 hidden font-sans text-sm/8 uppercase tracking-wide md:flex">
+          <div className="flex h-full flex-row space-x-5">
+            {nav.items.map((item, index) => {
+              return item.children && item.children.length
+                ? multiLink(item, index)
+                : singleLink(item);
+            })}
+          </div>
+        </div>
+        <div className="absolute top-0 mb-5 flex place-content-center self-center pt-4 md:static md:pt-0">
+          <Link href="/" className="">
+            <Logo width={70} className="shadow-xl shadow-white/10" />
+          </Link>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

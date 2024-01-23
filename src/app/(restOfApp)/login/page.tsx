@@ -2,7 +2,7 @@
 
 import { SignIn } from "@clerk/nextjs";
 import { useSearchParams } from "next/navigation";
-import ThemeComponent from "@/components/ThemeComponent";
+import ThemeComponent from "@/tempname/ThemeComponent";
 
 const Welcome = () => {
   const { get } = useSearchParams();

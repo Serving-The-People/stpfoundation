@@ -1,4 +1,4 @@
-import { Container } from "@/components/Container";
+import { Container } from "@/tempname/Container";
 import personnel from "@/data/personnel.json";
 import { Metadata } from "next";
 import Link from "next/link";

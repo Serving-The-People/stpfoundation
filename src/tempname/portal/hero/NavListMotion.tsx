@@ -1,6 +1,6 @@
 "use client";
 
-import nav from "@/components/portal/nav/Nav.json";
+import nav from "@/tempname/portal/nav/Nav.json";
 import { motion } from "framer-motion";
 import React from "react";
 import LinkComponent from "./LinkComponent";
@@ -19,7 +19,7 @@ const NavListMotion: React.FC = () => {
       }}
     >
       <motion.li
-        className="relative z-50 mt-10 space-y-7"
+        className="relative z-50 mt-10 space-y-7 items-center justify-center flex flex-col"
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}

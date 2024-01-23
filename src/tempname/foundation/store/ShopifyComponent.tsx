@@ -57,12 +57,18 @@ const ShopifyComponent = () => {
                     "position": "absolute",
                     "left": "0",
                     "right": "0",
-                    "top": "0"
+                    "top": "0",
+                    "z-index": "999",
                   },
                   "imgWrapper": {
                     "padding-top": "calc(75% + 15px)",
                     "position": "relative",
-                    "height": "0"
+                    "height": "0",
+                    
+                    ":hover": {
+                      "transform": "scale(1.5)",
+                      "transition": "transform 0.2s ease-in-out"
+                    }
                   }
                 },
                 "title": {

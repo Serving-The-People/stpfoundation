@@ -16,7 +16,8 @@ import { useUser } from "@clerk/nextjs";
 
 LR.registerBlocks(LR);
 
-export default function PostForm({
+export default function 
+PostForm({
   slug,
   post,
   edit = false,

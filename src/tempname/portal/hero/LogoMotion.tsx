@@ -1,6 +1,6 @@
 "use client";
 
-import Logo from "@/components/portal/logo/Logo";
+import Logo from "@/tempname/portal/logo/Logo";
 import spotlight from "@/images/spotlight.svg";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -44,10 +44,11 @@ const LogoMotion: React.FC = () => {
               backgroundColor: "rgba(0, 0, 0, 0.9)",
               zIndex: 1,
             }}
+            className="rounded-sm"
           />
-          <Image src={spotlight} alt="spotlight" draggable={false} />
+          <Image src={spotlight} alt="spotlight" className="rounded-md" draggable={false} />
         </motion.div>
-        <Logo width={95} />
+        <Logo width={95} className="rounded-sm" />
       </motion.div>
     </div>
   );

@@ -1,8 +1,8 @@
 import { useConfirm } from "material-ui-confirm";
 import { useRouter } from "next/router";
 import React, { useContext } from "react";
-import PostForm from "../../../components/chan/posts/PostForm";
-import { UserContext } from "../../../components/userContext";
+import PostForm from "../../../tempname/chan/posts/PostForm";
+import { UserContext } from "../../../tempname/userContext";
 
 export default function BoardsShow() {
   const { loggedIn, isMember } = useContext(UserContext);

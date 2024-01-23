@@ -1,6 +1,6 @@
-import ThemeComponent from "@/components/ThemeComponent";
-import Footer from "@/components/portal/footer/Footer";
-import Header from "@/components/portal/header/Header";
+import ThemeComponent from "@/tempname/ThemeComponent";
+import Footer from "@/tempname/portal/footer/Footer";
+import Header from "@/tempname/portal/header/Header";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

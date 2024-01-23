@@ -1,6 +1,6 @@
 "use client";
 
-import Footer from "@/components/portal/footer/Footer";
+import Footer from "@/tempname/portal/footer/Footer";
 import { motion } from "framer-motion";
 import React from "react";
 

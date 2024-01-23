@@ -1,4 +1,4 @@
-import BoardComponent from "@/components/chan/boards/BoardComponent";
+import BoardComponent from "@/tempname/chan/boards/BoardComponent";
 
 export default function BoardsShow() {
   return <BoardComponent />;

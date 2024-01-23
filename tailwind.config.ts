@@ -11,6 +11,7 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
+        smHero: { raw: "(min-width: 490px)" },
         smMobileY: { raw: "(max-height: 600px)" },
         navMobileX: { raw: "(min-width: 368px) and (max-width: 409px)" },
         smMobileX: { raw: "(max-width: 375px)" },
@@ -18,6 +19,7 @@ const config: Config = {
         mdMobileX: { raw: "(max-width: 570px)" },
         smMuiMobileX: { raw: "(max-width: 599px)" },
         footerMobileX: { raw: "(max-width: 780px)" },
+        foundationNavX: { raw: "(min-width: 890px)" },
         catCol2: { raw: "(min-width: 1000px)" },
         catCol3: { raw: "(min-width: 1400px)" },
         catCol4: { raw: "(min-width: 2000px)" },

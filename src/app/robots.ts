@@ -14,8 +14,8 @@ export default function robots(): MetadataRoute.Robots {
         "/support",
         "/store",
       ],
-      disallow: "/",
     },
     sitemap: "https://stp.world/sitemap.xml",
+    host: "https://stp.world",
   };
 }
