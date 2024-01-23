@@ -1,5 +1,5 @@
-import Footer from "@/tempname/foundation/footer/Footer";
-import Header from "@/tempname/foundation/header/Header";
+import Footer from "@/components/foundation/footer/Footer";
+import Header from "@/components/foundation/header/Header";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

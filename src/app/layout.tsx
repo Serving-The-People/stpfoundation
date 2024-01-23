@@ -1,5 +1,5 @@
-import { AllClientContexts } from "@/tempname/AllClientContexts";
-import { UserProvider } from "@/tempname/userContext";
+import { AllClientContexts } from "@/components/AllClientContexts";
+import { UserProvider } from "@/components/userContext";
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";

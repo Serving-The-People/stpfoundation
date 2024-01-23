@@ -1,9 +1,9 @@
 "use client";
 
-import Comments from "@/tempname/chan/comments";
-import CommentForm from "@/tempname/chan/comments/CommentForm";
-import PostAttachmentViewer from "@/tempname/chan/posts/PostAttachmentViewer";
-import { LoadingState } from "@/tempname/chan/posts/PostsLoadingState";
+import Comments from "@/components/chan/comments";
+import CommentForm from "@/components/chan/comments/CommentForm";
+import PostAttachmentViewer from "@/components/chan/posts/PostAttachmentViewer";
+import { LoadingState } from "@/components/chan/posts/PostsLoadingState";
 import { PostResponse } from "@/types";
 import linkify from "@/utils/linkify";
 import { getBoard, getPost } from "@/utils/services";

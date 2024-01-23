@@ -1,7 +1,7 @@
 "use client";
 
-import Logo from "@/tempname/portal/logo/Logo";
-import nav from "@/tempname/portal/nav/Nav.json";
+import Logo from "@/components/portal/logo/Logo";
+import nav from "@/components/portal/nav/Nav.json";
 import ChevronDown from "@/images/icons/chevronDown";
 import ChevronUp from "@/images/icons/chevronUp";
 import LinkIcon from "@/images/icons/linkIcon";
@@ -111,7 +111,7 @@ function Header() {
               <div className="absolute inset-y-0 right-1 flex items-center">
                 <Disclosure.Button
                   color="black"
-                  className={`z-50 inline-flex h-auto rounded-md   p-2 text-white  hover:bg-neutral-900 focus:outline-none ${
+                  className={`z-50 inline-flex h-auto rounded-md p-2 text-white  hover:bg-neutral-900 focus:outline-none ${
                     open ? "bg-neutral-900" : "bg-[#000000e3]"
                   }`}
                 >

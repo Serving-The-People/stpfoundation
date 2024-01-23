@@ -1,5 +1,5 @@
-import ThemeComponent from "@/tempname/ThemeComponent";
-import ShopifyComponent from "@/tempname/foundation/store/ShopifyComponent";
+import ThemeComponent from "@/components/ThemeComponent";
+import ShopifyComponent from "@/components/foundation/store/ShopifyComponent";
 import flowerLogo from "@/images/flowerLogo.svg";
 import { Metadata } from "next";
 import Image from "next/image";

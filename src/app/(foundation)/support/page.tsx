@@ -1,4 +1,4 @@
-import { Container } from "@/tempname/Container";
+import { Container } from "@/components/Container";
 import nyscaLogo from "@/images/nyscaLogo.png";
 import type { Metadata } from "next";
 import Image from "next/image";
