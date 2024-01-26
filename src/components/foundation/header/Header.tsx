@@ -168,7 +168,7 @@ function Header({ showLogo }: HeaderProps) {
           width: "100%",
           padding: "4px",
         }}
-        className={`md:hidden ${
+        className={`foundationNavX:hidden ${
           pathname.startsWith("/chan") ? "absolute right-4" : "sticky"
         } top-[25px] z-50`}
       >
