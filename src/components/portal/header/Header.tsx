@@ -83,7 +83,7 @@ function singleLink(item: MenuItem) {
     <Link
       key={item.href}
       href={item.href}
-      className={`w-[100%] self-end rounded-md px-4 text-white ${
+      className={`w-min self-end rounded-md px-4 text-white ${
         isActive ? "bg-neutral-900" : "hover:bg-neutral-900"
       }`}
     >
