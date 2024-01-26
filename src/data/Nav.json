@@ -26,32 +26,7 @@
     {
       "href": "/foundation",
       "name": "Foundation",
-      "children": [
-        {
-          "href": "/foundation",
-          "name": "Mission"
-        },
-        {
-          "href": "/meetings",
-          "name": "Meetings"
-        },
-        {
-          "href": "/chan",
-          "name": "Forum"
-        },
-        {
-          "href": "/podcast",
-          "name": "Podcast"
-        },
-        {
-          "href": "/support",
-          "name": "Support"
-        },
-        {
-          "href": "/store",
-          "name": "Store"
-        }
-      ]
+      "children": []
     },
     {
       "href": "/proposals",

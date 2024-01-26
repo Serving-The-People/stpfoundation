@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
 
   return (
     <div className="mt-auto flex flex-col items-center">
-      <ul className="mb-4 flex w-[calc(100vw-2rem)] justify-center font-sans text-sm/4 uppercase tracking-wide text-white sm:justify-between">
+      <ul className="mb-4 mt-8 flex w-[calc(100vw-2rem)] justify-center font-sans text-sm/4 uppercase tracking-wide text-white sm:justify-between">
         {links.map((link, index) => (
           <li key={index} className={link.className}>
             <Link

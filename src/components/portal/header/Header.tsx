@@ -1,7 +1,7 @@
 "use client";
 
 import Logo from "@/components/portal/logo/Logo";
-import nav from "@/components/portal/nav/Nav.json";
+import nav from "@/data/Nav.json";
 import ChevronDown from "@/images/icons/chevronDown";
 import ChevronUp from "@/images/icons/chevronUp";
 import LinkIcon from "@/images/icons/linkIcon";
@@ -103,7 +103,7 @@ function Header() {
           width: "100%",
           padding: "4px",
         }}
-        className="z-50"
+        className="z-50 md:hidden"
       >
         {({ open }) => (
           <>
@@ -136,7 +136,7 @@ function Header() {
         )}
       </Disclosure>
       <div className="flex w-full justify-center md:mb-0 md:w-min md:flex-col">
-        <div className="mb-4 hidden font-sans text-sm/8 uppercase tracking-wide md:flex">
+        <div className="mb-4 hidden font-sans text-sm/8 uppercase tracking-wide md:flex pt-2">
           <div className="flex h-full flex-row space-x-5">
             {nav.items.map((item, index) => {
               return item.children && item.children.length
@@ -150,7 +150,7 @@ function Header() {
             <Logo width={70} className="shadow-xl shadow-white/10" />
           </Link>
         </div>
-        <div className="mb-[105px] md:mb-[12.5px]"/>
+        <div className="mb-[105px] md:mb-[12.5px]" />
       </div>
     </>
   );

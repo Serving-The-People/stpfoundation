@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const Membership = () => {
   return (
-    <Container className="mb-8 mt-6 max-w-[800px] text-slate-800">
+    <Container className="mb-8 mt-6 max-w-[1000px] text-slate-800">
       <div>
         <h1>We need your support!</h1>
         <p>

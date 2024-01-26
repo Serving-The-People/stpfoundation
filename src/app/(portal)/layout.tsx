@@ -13,7 +13,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
     <div className="flex min-h-[100svh] flex-col items-center bg-black">
       <ThemeComponent color="#000" />
       <Header />
-      <div className="mx-4 max-w-[800px] text-white">{children}</div>
+      <div className="mx-4 max-w-[1000px] text-white">{children}</div>
       <Footer />
     </div>
   );

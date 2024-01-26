@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function Community() {
   return (
     <>
-      <div className="my-6 max-w-[800px]">
+      <div className="my-6 max-w-[1000px]">
         <Container className="">
           <div className="text-slate-800">
             <h1>Mission</h1>

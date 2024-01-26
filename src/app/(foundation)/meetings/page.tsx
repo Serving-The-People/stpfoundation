@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function IndexPage() {
   return (
     <>
-      <Container className="my-6 w-full max-w-[800px]">
+      <Container className="my-6 w-full max-w-[1000px]">
         <div>
           <h1>Meetings</h1>
           <p>
@@ -21,14 +21,14 @@ export default function IndexPage() {
           </p>
           <iframe
             src="https://lu.ma/embed/calendar/cal-4veiS7H2EnbSJMW/events?lt=light"
-            className="h-[55vh] w-full max-w-[800px] rounded-md border border-slate-200"
+            className="h-[55vh] w-full max-w-[1000px] rounded-md border border-slate-200"
             allowFullScreen={true}
             aria-hidden="false"
             tabIndex={parseInt("0")}
           />
         </div>
       </Container>
-      <div className="mb-8 max-w-[800px]">
+      <div className="mb-8 mt-8 max-w-[1000px]">
         <p className="font-serif text-lg/8 tracking-[.035rem] text-slate-800">
           {`We understand that dialogue is what drives societal transformation and catalyzes profound progress.`}
         </p>

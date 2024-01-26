@@ -116,7 +116,7 @@ export default function PostPageChild() {
           className="flex flex-col items-center text-left "
           style={{ width: "calc(100vw - 2rem)" }}
         >
-          <div className="mb-2 max-w-[800px]">
+          <div className="mb-2 max-w-[1000px]">
             <h1 className="mt-4 font-sans text-lg font-bold">
               {post.title}{" "}
               <Link href={`/chan/${postSlug}`} passHref>

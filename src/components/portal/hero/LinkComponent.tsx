@@ -14,81 +14,8 @@ interface MenuItem {
 
 const LinkComponent = ({ item }: { item: MenuItem }): JSX.Element => {
   const pathname = usePathname();
-
   const isActive = pathname === item.href;
-  if (item.name === "Foundation") {
-    return (
-      <>
-        <Menu
-          as="div"
-          key={item.href}
-          className="relative hidden flex-col items-center text-center text-base/4 smHero:flex"
-        >
-          {({ open }) => (
-            <>
-              <Menu.Button
-                className={`z-1 flex flex-row rounded-md px-4 py-2 uppercase tracking-wide text-white ${
-                  isActive ? "bg-neutral-900" : "hover:bg-neutral-900"
-                }`}
-              >
-                {item.name}
-                <span
-                  className={`ml-1 mt-[-0.5rem] ${open ? "hidden" : "block"}`}
-                >
-                  <ChevronDown />
-                </span>
-                <span
-                  className={`ml-1 mt-[-0.5rem] smHero:mb-[-0.5rem] smHero:mt-0 smHero:translate-y-[-0.27rem] smHero:rotate-90 ${
-                    open ? "block" : "hidden"
-                  }`}
-                >
-                  <ChevronUp />
-                </span>
-              </Menu.Button>
-              {open && (
-                <Menu.Items
-                  static
-                  className="absolute z-10 mt-10 flex w-max flex-col items-center rounded-md bg-[#000000e3] tracking-wide text-white smHero:ml-80 smHero:mt-0 smHero:items-start"
-                >
-                  {item.children?.map((child) => (
-                    <Menu.Item key={child.href}>
-                      <Link
-                        href={child.href}
-                        className={`flex flex-row rounded-md px-4 py-[0.55rem] text-base/4 tracking-wide ${
-                          isActive ? "bg-neutral-900" : "hover:bg-neutral-900"
-                        }`}
-                        target={
-                          child.href.startsWith("https://") ? "_blank" : ""
-                        }
-                      >
-                        {child.name}
-                        {child.href.startsWith("https://") ? (
-                          <span className="translate-y-[-0.1rem]">
-                            <LinkIcon />
-                          </span>
-                        ) : (
-                          ""
-                        )}
-                      </Link>
-                    </Menu.Item>
-                  ))}
-                </Menu.Items>
-              )}
-            </>
-          )}
-        </Menu>
-        <Link
-          key={item.href}
-          href={item.href}
-          className={`flex w-min flex-col rounded-md px-4 py-2 text-center text-base/4 tracking-wide text-white smHero:hidden ${
-            isActive ? "bg-neutral-900" : "hover:bg-neutral-900"
-          }`}
-        >
-          {item.name}
-        </Link>
-      </>
-    );
-  }
+
   if (item.children && item.children.length) {
     return (
       <>

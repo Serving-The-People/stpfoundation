@@ -16,7 +16,7 @@ const Podcast: React.FC = () => {
           src="https://embed.podcasts.apple.com/us/podcast/discussions/id1677642006?itsct=podcast_box_player&amp;itscg=30200&amp;ls=1&amp;theme=light"
           sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
           allow="autoplay *; encrypted-media *; clipboard-write"
-          className="h-[450px] max-w-[800px] rounded-md border-slate-200"
+          className="h-[450px] max-w-[1000px] rounded-md border-slate-200"
           style={{
             width: "calc(100vw - 2rem)",
             overflow: "hidden",
