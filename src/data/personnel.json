@@ -42,23 +42,5 @@
           "name": "David Jacobs"
         }
       ]
-    },
-    {
-      "name": "Staff",
-      "children": [
-        {
-          "name": "Zoey Poole"
-        },
-        {
-          "name": "Santiago"
-        },
-        {
-          "name": "Lucien Smith"
-        },
-        {
-          "name": "Michael Moseberg"
-        }
-      ]
     }
-  ]
 }
