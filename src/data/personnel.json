@@ -24,25 +24,22 @@
         {
           "name": "Tremaine Emory"
         }
+         {
+          "name": "Gia Kuan"
+        } 
+        {
+          "name": "Anastasiya Siro"
+        }
       ]
     },
     {
       "name": "Advisory Board",
       "children": [
         {
-          "name": "Anastasiya Siro"
-        },
-        {
-          "name": "Adam Cohen"
-        },
-        {
           "name": "Arun Dua"
         },
         {
           "name": "David Jacobs"
-        }
-           {
-          "name": "Gia Kuan"
         }
       ]
     }
