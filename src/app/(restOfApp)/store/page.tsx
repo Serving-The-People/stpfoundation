@@ -1,6 +1,6 @@
 import ThemeComponent from "@/components/ThemeComponent";
 import ShopifyComponent from "@/components/foundation/store/ShopifyComponent";
-import STP.Foundation.Logo from "@/images/STP.Foundation.Logo.png";
+import logo from "@/images/logo.svg";
 import { Metadata } from "next";
 import Image from "next/image";
 
@@ -14,7 +14,7 @@ export default function Store() {
     <div className="flex w-full flex-col place-content-center">
       <ThemeComponent color="#fff" />
       <Image
-        src={STP.Foundation.Logo}
+        src={logo}
         alt="Serving the People Flower Logo"
         className="absolute left-0 right-0 top-4 ml-auto mr-auto md:static md:mt-5 md:self-center"
       />
