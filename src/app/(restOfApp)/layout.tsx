@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <div className="mx-4 flex min-h-[100svh] flex-col items-center">
-      <Header />
+      <Header showLogo={true}/>
       {children}
       <Footer />
     </div>
