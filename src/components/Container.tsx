@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export function Container({
   className,
@@ -6,7 +6,7 @@ export function Container({
 }: React.ComponentPropsWithoutRef<"div">) {
   return (
     <div
-      className={clsx(
+      className={twMerge(
         "flex flex-col justify-between [&_div]:mb-2 [&_div]:tracking-[.02rem] [&_h1]:mb-8 [&_h1]:text-2xl [&_p]:mb-8 [&_p]:text-base/8",
         className
       )}

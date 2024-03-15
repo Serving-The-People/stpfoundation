@@ -140,6 +140,7 @@ function singleLink(item: MenuItem) {
 function Header({ showLogo }: HeaderProps) {
   const user = useUser();
   const pathname = usePathname();
+  const isStore = pathname.startsWith("/store");
 
   if (pathname === "/login") {
     showLogo = true;
@@ -178,7 +179,7 @@ function Header({ showLogo }: HeaderProps) {
               <div className="absolute inset-y-0 -right-3 flex items-center">
                 <Disclosure.Button
                   className={`${
-                    open ? "bg-[#eff0f0]" : "bg-[#f4f4fecb]"
+                    open ? "bg-[#eff0f0]" : `${!isStore ? "bg-[#f4f4fecb]" : "bg-white"} `
                   } z-50 inline-flex h-auto rounded-md p-2 text-[#4a4d50] hover:bg-[#eff0f0] hover:text-[#4a4d50] focus:outline-none`}
                 >
                   {open ? (

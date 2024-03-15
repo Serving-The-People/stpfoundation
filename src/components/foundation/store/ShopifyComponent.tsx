@@ -64,11 +64,6 @@ const ShopifyComponent = () => {
                     "padding-top": "calc(75% + 15px)",
                     "position": "relative",
                     "height": "0",
-                    
-                    ":hover": {
-                      "transform": "scale(1.5)",
-                      "transition": "transform 0.2s ease-in-out"
-                    }
                   }
                 },
                 "title": {

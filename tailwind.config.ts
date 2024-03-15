@@ -19,7 +19,7 @@ const config: Config = {
         mdMobileX: { raw: "(max-width: 570px)" },
         smMuiMobileX: { raw: "(max-width: 599px)" },
         footerMobileX: { raw: "(max-width: 780px)" },
-        foundationNavX: { raw: "(min-width: 890px)" },
+        foundationNavX: { raw: "(min-width: 940px)" },
         catCol2: { raw: "(min-width: 1000px)" },
         catCol3: { raw: "(min-width: 1400px)" },
         catCol4: { raw: "(min-width: 2000px)" },

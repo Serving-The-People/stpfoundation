@@ -1,3 +1,4 @@
+import SubscribeToast from "@/components/SubscribeToast";
 import ThemeComponent from "@/components/ThemeComponent";
 import FooterMotion from "@/components/portal/hero/FooterMotion";
 import LogoMotion from "@/components/portal/hero/LogoMotion";
@@ -19,6 +20,7 @@ const Home: React.FC = () => {
         <NavListMotion />
       </div>
       <FooterMotion />
+      <SubscribeToast/>
     </div>
   );
 };

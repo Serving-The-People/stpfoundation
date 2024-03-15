@@ -84,7 +84,7 @@ export default function Comments({
                       ? `${comment.user?.firstName} ${comment.user?.lastName}`
                       : "Anonymous"}
                   </span>{" "}
-                  <p className="min-w-max font-sans text-gray-500">
+                  <p className="min-w-max self-center font-sans text-gray-500">
                     commented @&nbsp;
                   </p>
                   <time

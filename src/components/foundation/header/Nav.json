@@ -16,6 +16,11 @@
       "children": []
     },
     {
+      "href": "/blog",
+      "name": "Blog",
+      "children": []
+    },
+    {
       "href": "/chan",
       "name": "Forum",
       "children": []

@@ -6,11 +6,6 @@ import React from "react";
 const Footer: React.FC = () => {
   const links = [
     {
-      href: "https://blog.stp.world",
-      content: "Join Our Mailing List",
-      className: "hidden lg:block",
-    },
-    {
       href: "/",
       content: "©2023 The STP Creative LLC",
       className: "",
