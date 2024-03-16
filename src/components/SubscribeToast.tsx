@@ -27,18 +27,18 @@ const SubscribeToast: React.FC = () => {
       );
       helpers.setSubmitting(false);
       helpers.resetForm();
-      sessionStorage.setItem("subscribedEmail", values.email);
+      sessionStorage.setItem("isSubscribed", "true");
       setShowToast(false);
       setShowConfirmation(true);
     },
   });
 
   useEffect(() => {
-    const storedEmail = sessionStorage.getItem("subscribedEmail");
-    if (!storedEmail) {
+    const isSubscribed = sessionStorage.getItem("isSubscribed") === "true";
+    if (!isSubscribed) {
       setTimeout(() => {
         setShowToast(true);
-      }, 1100);
+      }, 1300);
     }
   }, []);
 
@@ -63,7 +63,8 @@ const SubscribeToast: React.FC = () => {
           <div className="flex flex-col" >
           <h3 className="text-lg tracking-normal text-neutral-300">
            Sign up for our newsletter!
-          </h3></div>
+          </h3>
+          </div>
           <button
           type="button"
             onClick={handleClose}
