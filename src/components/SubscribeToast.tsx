@@ -52,7 +52,7 @@ const SubscribeToast: React.FC = () => {
     <>
       <form
         onSubmit={formik.handleSubmit}
-        className={`fixed bottom-[3.25rem] left-4 z-50 rounded-lg bg-[#171717f3] p-4 shadow-lg transition-opacity duration-300 ${
+        className={`fixed bottom-[3.25rem] center z-50 rounded-lg bg-[#171717f3] p-4 shadow-lg transition-opacity duration-300 ${
           showToast ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
@@ -96,7 +96,7 @@ const SubscribeToast: React.FC = () => {
         </div>
       </form>
       {showConfirmation && (
-        <div className="fixed bottom-[3.25rem] left-4 z-50 rounded-lg bg-[#171717f3] p-4 shadow-lg transition-opacity duration-300">
+        <div className="fixed bottom-[3.25rem] center z-50 rounded-lg sm:-mr-6 bg-[#171717f3] p-4 shadow-lg transition-opacity duration-300">
           <div className="flex items-center justify-between">
             <h3 className="text-lg tracking-normal text-neutral-300">
               You're Subscribed!
