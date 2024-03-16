@@ -58,7 +58,7 @@ const SubscribeToast: React.FC = () => {
       >
         <div className="flex items-center justify-between">
           <h3 className="text-lg tracking-normal text-neutral-300">
-            Subscribe to our blog!
+            Sign up for our newsletter!
           </h3>
           <button
             onClick={handleClose}
