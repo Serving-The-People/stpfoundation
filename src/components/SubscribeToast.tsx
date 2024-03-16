@@ -62,7 +62,7 @@ const SubscribeToast: React.FC = () => {
           </h3>
           <button
             onClick={handleClose}
-            className="ml-4 rounded-md hover:bg-black px-2 py-1 text-neutral-300"
+            className="ml-4 rounded-md hover:bg-black px-2 py-1 text-neutral-300 focus:ring-1 focus:ring-blue-500 focus:ring-offset-1 focus:ring-offset-blue-500 focus:outline-none"
           >
             &#x2715;
           </button>
@@ -74,7 +74,7 @@ const SubscribeToast: React.FC = () => {
             placeholder="Type your email..."
             value={formik.values.email}
             onChange={formik.handleChange}
-            className="mb-2 w-full rounded-md bg-neutral-600 px-3 py-1.5 placeholder:text-neutral-400"
+            className="mb-2 w-full rounded-md bg-neutral-600 px-3 py-1.5 placeholder:text-neutral-400 text-neutral-400 focus:ring-1 focus:ring-blue-500 focus:ring-offset-1 focus:ring-offset-blue-500 focus:outline-none"
           />
           {formik.errors.email && (
             <div className="mb-2 text-red-500 text-sm w-max">
@@ -83,7 +83,7 @@ const SubscribeToast: React.FC = () => {
           )}
           <button
             type="submit"
-            className="rounded-md w-max bg-neutral-950 hover:bg-neutral-800 hover:text-neutral-200 px-3 py-1.5 text-neutral-300"
+            className="rounded-md w-max bg-neutral-950 hover:bg-neutral-800 hover:text-neutral-200 px-3 py-1.5 text-neutral-300 focus:ring-1 focus:ring-blue-500 focus:ring-offset-1 focus:ring-offset-blue-500 focus:outline-none"
             disabled={formik.isSubmitting}
           >
             {!formik.isSubmitting && <>Subscribe</>}
