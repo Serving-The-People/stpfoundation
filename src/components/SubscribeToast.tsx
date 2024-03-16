@@ -6,6 +6,8 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
+import substack from "@/images/substack.jpeg";
 
 const initialState = { email: "" };
 
@@ -36,7 +38,7 @@ const SubscribeToast: React.FC = () => {
     if (!storedEmail) {
       setTimeout(() => {
         setShowToast(true);
-      }, 1000);
+      }, 1100);
     }
   }, []);
 
@@ -52,15 +54,18 @@ const SubscribeToast: React.FC = () => {
     <>
       <form
         onSubmit={formik.handleSubmit}
-        className={`fixed bottom-[3.25rem] center z-50 rounded-lg bg-[#171717f3] p-4 shadow-lg transition-opacity duration-300 ${
+        className={`fixed top-[25%] max-w-[75%] center z-50 rounded-lg flex flex-col justify-between bg-[#171717f3] p-4 shadow-lg transition-opacity duration-300 ${
           showToast ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
-        <div className="flex items-center justify-between">
+            <Image src={substack} height={400} width={400} alt="Logo" className="self-center rounded-sm h-auto w-auto"/>
+        <div className="mt-8 flex items-center justify-between">
+          <div className="flex flex-col" >
           <h3 className="text-lg tracking-normal text-neutral-300">
-            Sign up for our newsletter!
-          </h3>
+           Sign up for our newsletter!
+          </h3></div>
           <button
+          type="button"
             onClick={handleClose}
             className="ml-4 rounded-md hover:bg-black px-2 py-1 text-neutral-300 focus:ring-1 focus:ring-blue-500 focus:ring-offset-1 focus:ring-offset-blue-500 focus:outline-none"
           >
