@@ -19,13 +19,20 @@ export default function IndexPage() {
               ideas, and projects. They are designed to foster a supportive and inclusive environment 
               where members can share their experiences and learn from one another.`}
           </p>
-          <iframe
+          {/* <iframe
             src="https://lu.ma/embed/calendar/cal-4veiS7H2EnbSJMW/events?lt=light"
             className="h-[55vh] w-full max-w-[1000px] rounded-md border border-slate-200"
             allowFullScreen={true}
             aria-hidden="false"
             tabIndex={parseInt("0")}
-          />
+          /> */}
+          <iframe
+            src="https://calendar.google.com/calendar/embed?src=info%40stp.world&ctz=America%2FNew_York"
+            width="800"
+            height="600"
+            scrolling="no"
+            className="h-[55vh] w-full max-w-[1000px] rounded-md border border-slate-200"
+          ></iframe>
         </div>
       </Container>
       <div className="mb-8 mt-8 max-w-[1000px]">
