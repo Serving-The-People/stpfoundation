@@ -27,14 +27,14 @@ const SubscribeToast: React.FC = () => {
       );
       helpers.setSubmitting(false);
       helpers.resetForm();
-      sessionStorage.setItem("isSubscribed", "true");
+      localStorage.setItem("isSubscribed", "true");
       setShowToast(false);
       setShowConfirmation(true);
     },
   });
 
   useEffect(() => {
-    const isSubscribed = sessionStorage.getItem("isSubscribed") === "true";
+    const isSubscribed = localStorage.getItem("isSubscribed") === "true";
     if (!isSubscribed) {
       setTimeout(() => {
         setShowToast(true);
