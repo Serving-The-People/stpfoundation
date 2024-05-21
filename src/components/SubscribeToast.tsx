@@ -8,13 +8,12 @@ import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import substack from "@/images/substack.jpeg";
+import Cookies from "js-cookie";
 
 const initialState = { email: "" };
-
 const SubscribeToast: React.FC = () => {
   const [showToast, setShowToast] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
-
   const formik = useFormik({
     validationSchema: Yup.object({
       email: Yup.string().required("Required").email("Must be a valid email"),
@@ -27,25 +26,22 @@ const SubscribeToast: React.FC = () => {
       );
       helpers.setSubmitting(false);
       helpers.resetForm();
-      localStorage.setItem("isSubscribed", "true");
+      Cookies.set("isSubscribed", "true", { expires: 365 });
       setShowToast(false);
       setShowConfirmation(true);
     },
   });
-
   useEffect(() => {
-    const isSubscribed = localStorage.getItem("isSubscribed") === "true";
+    const isSubscribed = Cookies.get("isSubscribed") === "true";
     if (!isSubscribed) {
       setTimeout(() => {
         setShowToast(true);
       }, 1300);
     }
   }, []);
-
   const handleClose = () => {
     setShowToast(false);
   };
-
   const handleConfirmationClose = () => {
     setShowConfirmation(false);
   };
@@ -54,21 +50,27 @@ const SubscribeToast: React.FC = () => {
     <>
       <form
         onSubmit={formik.handleSubmit}
-        className={`fixed top-[25%] max-w-[75%] center z-50 rounded-lg flex flex-col justify-between bg-[#171717f3] p-4 shadow-lg transition-opacity duration-300 ${
-          showToast ? "opacity-100" : "opacity-0 pointer-events-none"
+        className={`center fixed top-[25%] z-50 flex max-w-[75%] flex-col justify-between rounded-lg bg-[#171717f3] p-4 shadow-lg transition-opacity duration-300 ${
+          showToast ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
       >
-            <Image src={substack} height={400} width={400} alt="Logo" className="self-center rounded-sm h-auto w-auto"/>
+        <Image
+          src={substack}
+          height={400}
+          width={400}
+          alt="Logo"
+          className="h-auto w-auto self-center rounded-sm"
+        />
         <div className="mt-8 flex items-center justify-between">
-          <div className="flex flex-col" >
-          <h3 className="text-lg tracking-normal text-neutral-300">
-           Sign up for our newsletter!
-          </h3>
+          <div className="flex flex-col">
+            <h3 className="text-lg tracking-normal text-neutral-300">
+              Sign up for our newsletter!
+            </h3>
           </div>
           <button
-          type="button"
+            type="button"
             onClick={handleClose}
-            className="ml-4 rounded-md hover:bg-black px-2 py-1 text-neutral-300 focus:ring-1 focus:ring-blue-500 focus:ring-offset-1 focus:ring-offset-blue-500 focus:outline-none"
+            className="ml-4 rounded-md px-2 py-1 text-neutral-300 hover:bg-black focus:outline-none focus:ring-1 focus:ring-blue-500 focus:ring-offset-1 focus:ring-offset-blue-500"
           >
             &#x2715;
           </button>
@@ -80,16 +82,16 @@ const SubscribeToast: React.FC = () => {
             placeholder="Type your email..."
             value={formik.values.email}
             onChange={formik.handleChange}
-            className="mb-2 w-full rounded-md bg-neutral-600 px-3 py-1.5 placeholder:text-neutral-400 text-neutral-400 focus:ring-1 focus:ring-blue-500 focus:ring-offset-1 focus:ring-offset-blue-500 focus:outline-none"
+            className="mb-2 w-full rounded-md bg-neutral-600 px-3 py-1.5 text-neutral-400 placeholder:text-neutral-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:ring-offset-1 focus:ring-offset-blue-500"
           />
           {formik.errors.email && (
-            <div className="mb-2 text-red-500 text-sm w-max">
+            <div className="mb-2 w-max text-sm text-red-500">
               {formik.errors.email}
             </div>
           )}
           <button
             type="submit"
-            className="rounded-md w-max bg-neutral-950 hover:bg-neutral-800 hover:text-neutral-200 px-3 py-1.5 text-neutral-300 focus:ring-1 focus:ring-blue-500 focus:ring-offset-1 focus:ring-offset-blue-500 focus:outline-none"
+            className="w-max rounded-md bg-neutral-950 px-3 py-1.5 text-neutral-300 hover:bg-neutral-800 hover:text-neutral-200 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:ring-offset-1 focus:ring-offset-blue-500"
             disabled={formik.isSubmitting}
           >
             {!formik.isSubmitting && <>Subscribe</>}
@@ -102,21 +104,19 @@ const SubscribeToast: React.FC = () => {
         </div>
       </form>
       {showConfirmation && (
-        <div className="fixed bottom-[3.25rem] center z-50 rounded-lg sm:-mr-6 bg-[#171717f3] p-4 shadow-lg transition-opacity duration-300">
+        <div className="center fixed bottom-[3.25rem] z-50 rounded-lg bg-[#171717f3] p-4 shadow-lg transition-opacity duration-300 sm:-mr-6">
           <div className="flex items-center justify-between">
             <h3 className="text-lg tracking-normal text-neutral-300">
               You're Subscribed!
             </h3>
             <button
               onClick={handleConfirmationClose}
-              className="ml-4 rounded-md hover:bg-black px-2 py-1 text-neutral-300"
+              className="ml-4 rounded-md px-2 py-1 text-neutral-300 hover:bg-black"
             >
               &#x2715;
             </button>
           </div>
-          <p className="mt-2 text-neutral-300">
-            Stay tuned for updates
-          </p>
+          <p className="mt-2 text-neutral-300">Stay tuned for updates</p>
         </div>
       )}
     </>

@@ -51,6 +51,7 @@
     "framer-motion": "^10.16.4",
     "googleapis": "^110.0.0",
     "heroicons": "^2.0.18",
+    "js-cookie": "^3.0.5",
     "lodash": "^4.17.21",
     "material-ui-confirm": "^3.0.9",
     "moment": "^2.29.4",
@@ -77,6 +78,7 @@
     ".next/cache"
   ],
   "devDependencies": {
+    "@types/js-cookie": "^3.0.6",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
